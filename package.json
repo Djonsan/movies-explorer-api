@@ -1,0 +1,22 @@
+{
+  "name": "movies-explorer-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Djonsan/movies-explorer-api.git"
+  },
+  "keywords": [
+    "yandex-praktikum"
+  ],
+  "author": "Evgeniy Tolochkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Djonsan/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/Djonsan/movies-explorer-api#readme"
+}
