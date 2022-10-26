@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
-const jwtSign = require('../helpers/jwt-sing');
+const jwtSign = require('../helpers/jwt-sign');
 const NotFoundError = require('../errors/not-found-err');
 const ValidationError = require('../errors/validation-err');
 const EmailConflictError = require('../errors/email-conflict-err');
