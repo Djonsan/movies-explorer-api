@@ -24,10 +24,16 @@ const movieSchema = new mongoose.Schema({
     required: true,
   },
   image: {
-    type: Object,
+    type: String,
     required: true,
+    validate: isURL,
   },
   trailerLink: {
+    type: String,
+    required: true,
+    validate: isURL,
+  },
+  thumbnail: {
     type: String,
     required: true,
     validate: isURL,
@@ -37,7 +43,7 @@ const movieSchema = new mongoose.Schema({
     ref: 'user',
     required: true,
   },
-  id: {
+  movieId: {
     type: Number,
     required: true,
   },
