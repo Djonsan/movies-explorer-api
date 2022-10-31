@@ -33,17 +33,17 @@ const validateUserInfo = celebrate({
 
 const validateMovieInfo = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().required(),
-    director: Joi.string().required(),
+    country: Joi.string().required().min(2),
+    director: Joi.string().required().min(2),
     duration: Joi.number().required(),
-    year: Joi.string().required().length(4),
-    description: Joi.string().required(),
+    year: Joi.string().required(),
+    description: Joi.string().required().min(2),
     image: Joi.string().required().custom(validateUrl),
-    trailerLink: Joi.string().required().custom(validateUrl),
+    trailerLink: Joi.string(),
     thumbnail: Joi.string().required().custom(validateUrl),
     movieId: Joi.number().required(),
-    nameRU: Joi.string().required().regex(/^[а-яёА-ЯЁ\d\s]+$/),
-    nameEN: Joi.string().required().regex(/^[a-zA-Z\d\s]+$/),
+    nameRU: Joi.string().required().min(1),
+    nameEN: Joi.string().min(1),
   }),
 });
 
