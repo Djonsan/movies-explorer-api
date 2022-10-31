@@ -42,8 +42,8 @@ const validateMovieInfo = celebrate({
     trailerLink: Joi.string().required().custom(validateUrl),
     thumbnail: Joi.string().required().custom(validateUrl),
     movieId: Joi.number().required(),
-    nameRU: Joi.string().required().regex(/^[а-яёА-ЯЁ\d\s]+$/),
-    nameEN: Joi.string().required().regex(/^[a-zA-Z\d\s]+$/),
+    nameRU: Joi.string().required(),
+    nameEN: Joi.string().required(),
   }),
 });
 
