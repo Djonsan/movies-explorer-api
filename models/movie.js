@@ -33,11 +33,6 @@ const movieSchema = new mongoose.Schema({
     required: true,
     validate: isURL,
   },
-  thumbnail: {
-    type: String,
-    required: true,
-    validate: isURL,
-  },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
