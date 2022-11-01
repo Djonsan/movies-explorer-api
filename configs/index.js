@@ -1,4 +1,4 @@
-const DATABASE = 'mongodb://localhost:27017/moviesdb';
+const DATABASE = 'mongodb://localhost:27017/bitfilmsdb';
 const JWT_SECRET_DEV = 'tolochkin-secret';
 
 module.exports = {

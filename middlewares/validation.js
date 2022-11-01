@@ -33,11 +33,11 @@ const validateUserInfo = celebrate({
 
 const validateMovieInfo = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().required().min(2),
-    director: Joi.string().required().min(2),
+    country: Joi.string().required(),
+    director: Joi.string().required(),
     duration: Joi.number().required(),
-    year: Joi.string().required(),
-    description: Joi.string().required().min(2),
+    year: Joi.string().required().length(4),
+    description: Joi.string().required(),
     image: Joi.string().required().custom(validateUrl),
     trailerLink: Joi.string().required().custom(validateUrl),
     thumbnail: Joi.string().required().custom(validateUrl),
