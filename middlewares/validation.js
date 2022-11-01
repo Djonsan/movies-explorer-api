@@ -38,17 +38,17 @@ const validateMovieInfo = celebrate({
     duration: Joi.number().required(),
     year: Joi.string().required().length(4),
     description: Joi.string().required(),
-    image: Joi.string().required().custom(validateUrl),
+    image: Joi.object().required(),
     trailerLink: Joi.string().required().custom(validateUrl),
     id: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
-  }),
+  }).unknown(),
 });
 
 const validateMovieId = celebrate({
   params: Joi.object().keys({
-    id: Joi.string().required().length(24).hex(),
+    movieId: Joi.string().required().length(24).hex(),
   }),
 });
 
